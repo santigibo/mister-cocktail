@@ -1,0 +1,54 @@
+.cocktail {
+  padding: 16px 32px;
+  border: 2px solid #27331F;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  transition: 0.3s;
+  height: 250px;
+
+  h4 {
+    margin-bottom: 16px;
+  }
+
+  ul {
+    margin-left: 8px;
+  }
+
+  li {
+    margin: 4px 0;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 12px 0 lightgrey;
+    text-decoration: none;
+  }
+}
+
+.new {
+  color: #27331F;
+
+  &:hover {
+    background-color: #27331F;
+    color: white;
+  }
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.medium-box {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #F1F0F1;
+  border: 1px dashed #27331F;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 0 lightgrey;
+  padding: 32px 24px;
+  font-size: 24px;
+}

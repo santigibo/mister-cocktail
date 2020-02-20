@@ -1,0 +1,28 @@
+<h1>Mr. Cocktails</h1>
+<div class="my-container">
+  <div class="my-grid mb-4 mt-3">
+    <% @cocktails.each do |c| %>
+      <%= link_to(cocktail_path(c.id)) do %>
+        <div class="cocktail" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(https://source.unsplash.com/collection/9459762/<%= (1..1000).to_a.sample %>)">
+          <h2><%= c.name %></h2>
+          <h5 class="ml-3">Ingredients:</h5>
+          <ul>
+            <% (0..1).each do |i| %>
+              <% unless c.ingredients[i].nil? %>
+                <li>- <%= c.ingredients[i].name  %></li>
+              <% end %>
+            <% end %>
+            <% unless c.ingredients[2].nil? %>
+              <li>...</li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    <% end %>
+    <%= link_to(new_cocktail_path) do %>
+      <div class="cocktail new d-flex justify-content-around align-items-center">
+        <h3>Add a new cocktail</h3>
+      </div>
+    <% end %>
+  </div>
+</div>

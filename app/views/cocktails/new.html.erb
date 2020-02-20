@@ -1,0 +1,13 @@
+<h1>New cocktail:</h1>
+<div class="container">
+  <br>
+  <div class="medium-box">
+    <%= simple_form_for(@cocktail) do |f| %>
+      <%= f.input :name %>
+      <div class="d-flex justify-content-between">
+        <%= f.submit class: 'submit-btn'%>
+        <%= link_to 'Cancel', cocktails_path, class: 'cancel-btn' %>
+      </div>
+    <% end %>
+  </div>
+</div>

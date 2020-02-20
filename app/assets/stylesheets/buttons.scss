@@ -1,0 +1,50 @@
+.my-btn {
+  border: 1px solid #F1F0F1;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: 0.3s;
+  color: black;
+
+  &:hover {
+    box-shadow: 0 0 8px 0 lightgrey;
+    color: rgba(30,30,30,0.8);
+  }
+}
+
+.fa-trash-alt {
+  color: black;
+  opacity: 0.6;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.cancel-btn {
+  padding: 8px 16px;
+  border: 1px solid #450C1F;
+  border-radius: 4px;
+  color: #450C1F;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #450C1F;
+    color: white;
+  }
+}
+
+.submit-btn {
+  padding: 8px 16px;
+  border: 1px solid #27331F;
+  background-color: none;
+  border-radius: 4px;
+  color: #27331F;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #27331F;
+    color: white;
+  }
+}
+

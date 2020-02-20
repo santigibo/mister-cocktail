@@ -1,0 +1,21 @@
+<h1><%= @cocktail.name %></h1>
+<div class="container">
+  <h2 class="text-center mb-4 mt-2">Doses</h2>
+  <div class="medium-box">
+    <ul>
+      <% @cocktail.doses.each do |d| %>
+        <li><strong><%= d.ingredient.name %></strong> - <%= d.description %> <%= link_to dose_path(d.id), method: :delete, data: { confirm: "Delete #{d.ingredient.name}?" } do %>
+                                                                                                            <i class="far fa-trash-alt"></i>
+                                                                                                          <% end %></li>
+      <% end %>
+    </ul>
+    <div class="d-flex justify-content-between mt-5">
+      <%= link_to(cocktails_path, class: 'my-btn') { %>
+        Back <i class="fas fa-chevron-circle-left"></i>
+      <% } %>
+      <%= link_to(new_cocktail_dose_path(@cocktail), class: 'my-btn') { %>
+        <i class="fas fa-plus"></i> Add dose
+      <% } %>
+    </div>
+  </div>
+</div>

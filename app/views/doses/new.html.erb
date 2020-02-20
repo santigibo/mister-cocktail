@@ -1,0 +1,13 @@
+<h1>Add a new dose:</h1>
+<div class="container">
+  <div class="medium-box">
+    <%= simple_form_for([@cocktail, @dose]) do |f| %>
+      <%= f.association :ingredient, collection: Ingredient.all.order(:name) %>
+      <%= f.input :description %>
+      <div class="d-flex justify-content-between">
+        <%= f.submit class: 'submit-btn' %>
+        <%= link_to 'Cancel', cocktail_path(@cocktail), class: 'cancel-btn' %>
+      </div>
+    <% end %>
+  </div>
+</div>
