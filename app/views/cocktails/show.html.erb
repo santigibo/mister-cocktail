@@ -1,3 +1,8 @@
+<nav class="navbar navbar-light justify-content-between my-nav">
+  <%= link_to 'Mr. Cocktails', cocktails_path %>
+  <%= link_to 'Add a cocktail', new_cocktail_path, class: 'but' %>
+</nav>
+
 <h1 class="header"><%= @cocktail.name %></h1>
 <div class="container">
   <h2 class="text-center mb-4 mt-2">Doses</h2>

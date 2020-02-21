@@ -1,9 +1,17 @@
+<nav class="navbar navbar-light justify-content-between my-nav">
+  <%= link_to 'Mr. Cocktails', cocktails_path %>
+</nav>
+
 <div class="my-banner">
   <h1>Mr. Cocktails</h1>
   <p>
     <span id="banner-typed-text"></span>
   </p>
+  <%= link_to 'Add a cocktail', new_cocktail_path, class: 'but bn' %>
 </div>
+<br>
+<h1 class="sub-header">This are all your cocktails</h1>
+<br>
 <div class="my-container">
   <div class="my-grid mb-4 mt-3">
     <% @cocktails.each do |c| %>
