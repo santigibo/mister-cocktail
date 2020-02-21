@@ -1,7 +1,6 @@
 <nav class="navbar navbar-light justify-content-between my-nav">
   <%= link_to 'Mr. Cocktails', cocktails_path %>
 </nav>
-
 <div class="my-banner">
   <h1>Mr. Cocktails</h1>
   <p>
@@ -10,13 +9,17 @@
   <%= link_to 'Add a cocktail', new_cocktail_path, class: 'but bn' %>
 </div>
 <br>
-<h1 class="sub-header">This are all your cocktails</h1>
+<h1 class="sub-header">These are all your cocktails</h1>
 <br>
 <div class="my-container">
   <div class="my-grid mb-4 mt-3">
     <% @cocktails.each do |c| %>
       <%= link_to(cocktail_path(c.id)) do %>
-        <div class="cocktail" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(https://source.unsplash.com/collection/9459762/<%= (1..1000).to_a.sample %>)">
+        <% if c.photo.attached? %>
+          <div class="cocktail" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('<%= cl_image_path c.photo.key, height: 300, width: 400, crop: :fill %>')">
+        <% else %>
+          <div class="cocktail" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/collection/9459762/<%= (1..200).to_a.sample %>')">
+        <% end %>
           <h2><%= c.name %></h2>
           <h5 class="ml-3">Ingredients:</h5>
           <ul>

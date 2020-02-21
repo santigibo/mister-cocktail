@@ -34,3 +34,16 @@
     font-size: 32px;
   }
 }
+
+.small-banner {
+  background-size: cover;
+  text-align: right;
+  color: white;
+  padding: 300px 240px;
+  height: 30vh;
+  background-position: center;
+  h1 {
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 90px;
+  }
+}

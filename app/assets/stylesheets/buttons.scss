@@ -1,5 +1,4 @@
 .my-btn {
-  border: 1px solid #F1F0F1;
   padding: 8px 16px;
   border-radius: 4px;
   transition: 0.3s;
@@ -9,6 +8,10 @@
     box-shadow: 0 0 8px 0 lightgrey;
     color: rgba(30,30,30,0.8);
   }
+}
+
+#add-btn {
+  cursor: pointer;
 }
 
 .fa-trash-alt {
@@ -34,10 +37,25 @@
   }
 }
 
+.my-upload-btn {
+  text: none;
+  padding: 8px 16px;
+  border: 1px solid black;
+  border-radius: 4px;
+  color: black;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(210,210,210);
+    color: black;
+  }
+}
+
 .submit-btn {
   padding: 8px 16px;
   border: 1px solid #27331F;
-  background-color: none;
+  background-color: #F1F0F1;
   border-radius: 4px;
   color: #27331F;
   transition: 0.3s;

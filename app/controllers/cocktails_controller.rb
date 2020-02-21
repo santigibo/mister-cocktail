@@ -8,9 +8,13 @@ class CocktailsController < ApplicationController
   end
 
   def create
-    Cocktail.create(params_secure)
-
-    redirect_to cocktails_path#(:id)
+    c = Cocktail.new(params_secure)
+    if c.valid?
+      c.save
+      redirect_to cocktail_path(c)
+    else
+      render :new
+    end
   end
 
   def show
@@ -20,6 +24,6 @@ class CocktailsController < ApplicationController
   private
 
   def params_secure
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :photo)
   end
 end

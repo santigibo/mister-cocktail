@@ -8,7 +8,13 @@
   <div class="medium-box">
     <%= simple_form_for(@cocktail) do |f| %>
       <%= f.input :name %>
-      <div class="d-flex justify-content-between">
+      <label class="my-upload-btn text-center w-100 mb-4">
+        Add a photo from your computer
+        <span style="display:none;">
+          <%= f.input :photo, as: :file, required:true %>
+        </span>
+      </label>
+      <div class="d-flex options justify-content-between">
         <%= f.submit class: 'submit-btn'%>
         <%= link_to 'Cancel', cocktails_path, class: 'cancel-btn' %>
       </div>

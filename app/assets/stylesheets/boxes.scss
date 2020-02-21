@@ -54,6 +54,8 @@ a:hover {
 }
 
 .medium-box {
+  height: 400px;
+  // position: absolute;
   width: 600px;
   margin: 0 auto;
   background-color: #F1F0F1;
@@ -62,4 +64,20 @@ a:hover {
   box-shadow: 0 0 8px 0 lightgrey;
   padding: 32px 24px;
   font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  ul {
+    flex-grow: 1;
+  }
 }
+
+.title-box {
+   width: 600px;
+}
+
+// .options {
+//   position: relative;
+//   bottom: 0;
+// }

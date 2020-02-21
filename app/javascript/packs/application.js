@@ -18,5 +18,19 @@
 import 'bootstrap';
 
 console.log('Hello World from Webpacker')
+
+const a = document.getElementById('add-btn');
+
+a.addEventListener('click', (event) => {
+  event.preventDefault();
+  console.log(event.currentTarget)
+  const f = document.getElementById('add-form');
+  console.log(f)
+  console.log(f.style.visibility)
+  f.style.visibility = 'visible';
+  a.style.visibility = 'hidden';
+  console.log(f.style.visibility)
+});
+
 import { loadDynamicBannerText } from '../components/banner';
 loadDynamicBannerText();
