@@ -9,8 +9,6 @@ require 'open-uri'
 require 'json'
 require 'faker'
 
-Cocktail.destroy_all
-
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 array = JSON.parse(open(url).read)['drinks']
 
